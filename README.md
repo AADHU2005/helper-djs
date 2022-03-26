@@ -1,5 +1,5 @@
 # helper-djs
-Djs Helper is is a powerful [Node.js](https://nodejs.org/) module
+Helper Djs is is a powerful [Node.js](https://nodejs.org/) module
 
 ## Features
 - Error Handler
