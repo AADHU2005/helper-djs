@@ -1,4 +1,4 @@
-# djs-helper
+# helper-djs
 Djs Helper is is a powerful [Node.js](https://nodejs.org/) module
 
 ## Features
@@ -7,7 +7,7 @@ Djs Helper is is a powerful [Node.js](https://nodejs.org/) module
 ## Installation
 
 ```sh-session
-npm install djs-helper
+npm install helper-djs
 ```
 
 ## Bot Setup
@@ -18,7 +18,7 @@ const client = new Client({
   intents: 32767, //All the intents
 })
 
-const { ErrorHandler } = require('djs-help')
+const { ErrorHandler } = require('helper-djs')
 
 ErrorHandler({ webhook: "webhook url" })
 
