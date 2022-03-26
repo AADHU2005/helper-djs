@@ -2,7 +2,7 @@ const { WebhookClient, MessageEmbed } = require("discord.js")
 const process = require('process');
 
 module.exports = class ErrorHandler {
-    constructor(option = {}) {
+    constructor(options = {}) {
 
         this.webhook = (options.webhook? new WebhookClient(options.webhook) : false)
         if (!this.webhook) throw new Error('WEBHOOK_URL_INVALID');
