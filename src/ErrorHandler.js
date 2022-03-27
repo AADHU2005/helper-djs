@@ -4,7 +4,7 @@ const process = require('process');
 module.exports = class ErrorHandler {
     constructor(options = {}) {
 
-        this.webhook = (options.webhook? new WebhookClient(options.webhook) : false)
+        this.webhook = (options.webhook? new WebhookClient({ url: options.webhook }) : false)
         if (!this.webhook) throw new Error('WEBHOOK_URL_INVALID');
 
     }

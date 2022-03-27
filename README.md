@@ -1,6 +1,14 @@
 # helper-djs
 Helper Djs is a powerful [Node.js](https://nodejs.org/) module
 
+<div align="center">
+  <p>
+    <a href="https://discord.gg/zyRX8nNt7b"><img src="https://img.shields.io/discord/867769297467473950?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
+    <a href="https://www.npmjs.com/package/helper-djs"><img src="https://img.shields.io/npm/v/helper-djs.svg?maxAge=3600" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/helper-djs"><img src="https://img.shields.io/npm/dt/helper-djs.svg?maxAge=3600" alt="npm downloads" /></a>
+  </p>
+</div>
+
 ## Features
 - Error Handler
 
