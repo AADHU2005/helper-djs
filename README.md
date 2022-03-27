@@ -11,6 +11,7 @@ Helper Djs is a powerful [Node.js](https://nodejs.org/) module
 
 ## Features
 - Error Handler
+- Auto Meme
 
 ## Requirement
 - node v16.14
