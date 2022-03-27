@@ -39,14 +39,7 @@ function embed(error) {
     const errorEmbed = new MessageEmbed()
     .setColor('#f54b4b')
     .setTimestamp()
-    .setDescription("\`\`\`js\n" + short(error, 4000) + "\`\`\`")
+    .setDescription("\`\`\`js\n" + error + "\`\`\`")
 
     return errorEmbed
-}
-
-function short(string, limit) {
-    if(string.length <= limit){
-      return string;
-    }
-    return string.slice(0,limit) + '...';
 }
