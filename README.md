@@ -20,7 +20,7 @@ const client = new Client({
 
 const { ErrorHandler } = require('helper-djs')
 
-ErrorHandler({ webhook: "webhook url" })
+new ErrorHandler({ webhook: "webhook url" })
 
 client.login('Secret Token')
 ```
