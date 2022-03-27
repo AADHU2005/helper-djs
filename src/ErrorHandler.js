@@ -10,7 +10,7 @@ module.exports = class ErrorHandler {
         const channel = this.webhook
 
         process.on('uncaughtException', function(err) {
-            console.log("Uncaught Exception" + err);
+            console.log("Uncaught Exception: " + err);
             channel.send({ embeds: [embed(err)] });
         })
 
@@ -31,11 +31,7 @@ module.exports = class ErrorHandler {
             
             channel.send({ embeds: [embed(warning.stack)] });
         })
-
-        process.on('uncaughtException', function(err) {
-            console.log('Uncaught Exception: ' + err);
-            channel.send({ embeds: [embed(err)] });
-        })
+        
     }
 }
 
