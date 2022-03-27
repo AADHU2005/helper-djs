@@ -11,17 +11,17 @@ module.exports = class ErrorHandler {
 
         process.on('uncaughtException', function(err) {
             console.log("Uncaught Exception" + err);
-            channel.send({ embed: [embed(err)] });
+            channel.send({ embeds: [embed(err)] });
         })
 
         process.on('rejectionHandled', function(err) {
             console.log('Rejection Handled: ' + err.stack);
-            channel.send({ embed: [embed(err)] });
+            channel.send({ embeds: [embed(err)] });
         })
 
         process.on('unhandledRejection', function(err) {
             console.log('Unrejection Handled: ' + err.stack);
-            channel.send({ embed: [embed(err)] });
+            channel.send({ embeds: [embed(err)] });
         })
 
         process.on('warning', (warning) => {
@@ -29,7 +29,7 @@ module.exports = class ErrorHandler {
             console.warn(warning.message);
             console.warn(warning.stack);
             
-            channel.send({ embed: [embed(warning.stack)] });
+            channel.send({ embeds: [embed(warning.stack)] });
         })
 
     }
