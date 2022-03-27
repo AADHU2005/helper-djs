@@ -7,10 +7,6 @@ module.exports = class ErrorHandler {
         this.webhook = (options.webhook? new WebhookClient({ url: options.webhook }) : false)
         if (!this.webhook) throw new Error('WEBHOOK_URL_INVALID');
 
-    }
-
-    async errorlogger() {
-
         const channel = this.webhook
 
         process.on('uncaughtException', function(err) {
@@ -35,6 +31,7 @@ module.exports = class ErrorHandler {
             
             channel.send({ embed: [embed(warning.stack)] });
         })
+
     }
 }
 
@@ -42,7 +39,7 @@ function embed(error) {
     const errorEmbed = new MessageEmbed()
     .setColor('#f54b4b')
     .setTimestamp()
-    .setDescription("\`\`\`js\n" + short(error, 4085) + "\`\`\`")
+    .setDescription("\`\`\`js\n" + short(error, 4000) + "\`\`\`")
 
     return errorEmbed
 }
