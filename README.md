@@ -21,7 +21,7 @@ Helper Djs is a powerful [Node.js](https://nodejs.org/) module
 npm install helper-djs
 ```
 
-## Bot Setup
+## Bot Setup [ErrorHandler]
 
 ```js
 const { Client } = require("discord.js")
@@ -32,6 +32,30 @@ const client = new Client({
 const { ErrorHandler } = require('helper-djs')
 
 new ErrorHandler({ webhook: "webhook url" })
+
+client.login('Secret Token')
+```
+
+## Bot Setup [AutoMeme]
+
+```js
+const { Client } = require("discord.js")
+const client = new Client({
+  intents: 32767, //All the intents
+})
+
+client.on('ready', () => {
+  console.log('Ready!!')
+
+  const { AutoMeme } = require('helper-djs')
+  const automeme = new AutoMeme({
+    guild: "Guild ID",
+    channel: "Channel ID",
+    interval: 120000 // you can set interval between 30000 to 300000
+  })
+
+  automeme.start(client)
+})
 
 client.login('Secret Token')
 ```

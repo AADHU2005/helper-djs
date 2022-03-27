@@ -12,4 +12,8 @@
                       888                                   888P"                               
 */
 
+//Error Handler
 module.exports.ErrorHandler = require('./src/ErrorHandler')
+
+//Auto Meme
+module.exports.AutoMeme = require('./src/AutoMeme')
